@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>MessageGun — Decentralized Chat</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+  h2 { margin-bottom: 4px; }
+  #info { color: #666; font-size: 13px; margin-bottom: 16px; }
+  #chat { border: 1px solid #ddd; border-radius: 8px; padding: 12px; height: 360px; overflow-y: auto; margin-bottom: 12px; background: #fafafa; }
+  .msg { padding: 8px; margin-bottom: 6px; background: white; border-radius: 6px; border: 1px solid #eee; }
+  .msg.me { background: #eaf2ff; }
+  .msg .who { font-weight: 600; font-size: 13px; }
+  .msg .text { margin: 4px 0; word-wrap: break-word; }
+  .msg .meta { font-size: 11px; color: #999; }
+  #compose { display: flex; gap: 8px; margin-bottom: 8px; }
+  #content { flex: 1; padding: 10px; font-size: 15px; }
+  #send-btn { padding: 10px 18px; font-size: 15px; cursor: pointer; }
+  #name-row { margin-bottom: 12px; }
+  #name { padding: 6px; font-size: 14px; width: 160px; }
+</style>
+</head>
+<body>
+  <h2>MessageGun</h2>
+  <div id="info">Decentralized chat — GunDB, no central server holds your messages</div>
+
+  <div id="name-row">
+    Your name: <input id="name" placeholder="Your name" value="Suresh" />
+  </div>
+
+  <div id="chat"></div>
+  <div id="compose">
+    <input id="content" placeholder="Type a message..." />
+    <button id="send-btn">Send</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
