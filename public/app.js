@@ -1,6 +1,6 @@
 // --- Connect to your relay peer(s). Update this if you deploy the relay
 // somewhere other than localhost (e.g. a Render/Fly.io/Railway URL). ---
-const RELAY_PEERS = ["http://localhost:8765/gun"];
+const RELAY_PEERS = ["https://gun-test.onrender.com/gun"];
 
 const gun = Gun({ peers: RELAY_PEERS });
 
